@@ -1,4 +1,4 @@
-import executor.ServiceManager;
+import service.Server;
 
 /**
  * 服务运行入口.
@@ -6,6 +6,6 @@ import executor.ServiceManager;
 public class Main {
     public static void main(String[] args) {
         // 开启服务
-        ServiceManager.start();
+        Server.start();
     }
 }

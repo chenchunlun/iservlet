@@ -7,8 +7,17 @@ import java.io.UnsupportedEncodingException;
  * HTTP响应.
  */
 public final class HttpResponse {
+    /**
+     * socket输入流
+     */
     OutputStream outputStream;
+    /**
+     * 正文
+     */
     byte[] content;
+    /**
+     * 字符集
+     */
     String characterSet;
 
     HttpResponse(OutputStream outputStream, String characterSet) {
@@ -27,7 +36,7 @@ public final class HttpResponse {
     }
 
     /**
-     * 做出响应
+     * 做出响应.
      *
      * @param content
      */
@@ -40,7 +49,7 @@ public final class HttpResponse {
     }
 
     /**
-     * 做出响应
+     * 做出响应.
      *
      * @param content
      */

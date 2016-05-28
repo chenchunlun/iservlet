@@ -35,7 +35,7 @@ public class HttpServlet {
         }
 
         if (200 == code) {
-            success(response.outputStream, response.content, request.getCharacterSet());
+            success(response.outputStream, response.content, response.characterSet);
         } else {
             fail(response.outputStream, code, request.getCharacterSet());
         }
@@ -68,7 +68,7 @@ public class HttpServlet {
         byte[] content = new byte[0];
         try {
             content = String.valueOf(code).getBytes(chararcterSet);
-        } catch (UnsupportedEncodingException e){
+        } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
             content = String.valueOf(code).getBytes();
         }

@@ -9,7 +9,7 @@ import java.util.concurrent.Executors;
 /**
  * 服务管理者
  */
-public class Server {
+public final class Server {
     private static ServerSocket server = null;
     private static ExecutorService executor = Executors.newCachedThreadPool();
 

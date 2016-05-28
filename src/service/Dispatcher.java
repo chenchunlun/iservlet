@@ -53,6 +53,8 @@ final class Dispatcher implements Runnable {
             try {
                 if (request != null) {
                     HttpServlet.fail(socket.getOutputStream(), 500, request.getCharacterSet());
+                } else {
+                    HttpServlet.fail(socket.getOutputStream(), 500, System.getProperty("file.encoding"));
                 }
             } catch (IOException e1) {
                 e1.printStackTrace();

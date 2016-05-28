@@ -10,8 +10,8 @@ import java.util.Date;
  * HTTP服务基类.
  */
 public class HttpServlet {
-    public static final String CRLF = "\r\n";
-    public static final String BLANK = " ";
+    private static final String CRLF = "\r\n";
+    private static final String BLANK = " ";
 
     /**
      * Servlet服务开启.
